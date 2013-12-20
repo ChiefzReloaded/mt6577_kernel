@@ -1,0 +1,4 @@
+#ifndef _CUST_EXT_CHARGER_H
+#define _CUST_EXT_CHARGER_H
+
+#endif /* _CUST_EXT_CHARGER_H */

@@ -1,0 +1,26 @@
+#
+# In oreder to support one comport in prelaoder and META mode,
+# USB VID/PID of META mode is the same as preloader.
+#
+
+on property:sys.usb.com_config=0
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/iSerial " "
+    write /sys/class/android_usb/android0/idVendor 1004
+    write /sys/class/android_usb/android0/idProduct 6000
+    write /sys/class/android_usb/android0/f_acm/instances 1
+    write /sys/class/android_usb/android0/f_gser/ports 1
+    write /sys/class/android_usb/android0/functions acm,gser
+    write /sys/class/android_usb/android0/enable 1
+    write /sys/devices/platform/mt_usb/cmode 1
+
+on property:sys.usb.com_config=1
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/iSerial " "
+    write /sys/class/android_usb/android0/idVendor 1004
+    write /sys/class/android_usb/android0/idProduct 6000
+    write /sys/class/android_usb/android0/f_acm/instances 1
+    write /sys/class/android_usb/android0/f_gser/ports 1
+    write /sys/class/android_usb/android0/functions acm,gser
+    write /sys/class/android_usb/android0/enable 1
+    write /sys/devices/platform/mt_usb/cmode 1
